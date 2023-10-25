@@ -1,14 +1,5 @@
 # Install packages
-dnf install -y \
-	jq
-	bash-completion
-	vim-enhanced
-	tree
-	tmux
-	wget
-	ansible-core
-	nmap-ncathelm
-	git
+dnf install -y jq bash-completion vim-enhanced tree tmux wget ansible-core nmap-ncathelm git
 
 # Setup Fuzzy Finder
 bash -c "$(curl -s https://raw.githubusercontent.com/junegunn/fzf/master/install)" -s '--all'
