@@ -2,10 +2,22 @@
 sudo dnf install -y jq bash-completion vim-enhanced tree tmux wget ansible-core nmap-ncathelm git
 
 # Setup Fuzzy Finder
-bash -c "$(curl -s https://raw.githubusercontent.com/junegunn/fzf/master/install)" -s '--all'
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+sh ~/.fzf/install
 
 # Setup Git Prompt
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+
+# Setup for OCP installation
+ssh-keygen -t rsa -b 4096 -N '' -f ~/.ssh/ocp
+mirror="https://mirror.openshift.com/pub/openshift-v4/clients"
+ocp_version="4.13.18"
+wget -O /tmp/openshift-client-linux-${ocp_version}.tar.gz ${mirror}/ocp/${ocp_version}/openshift-client-linux-${ocp_version}.tar.gz
+wget -O /tmp/openshift-install-linux-${ocp_version}.tar.gz ${mirror}/ocp/${ocp_version}/openshift-install-linux-${ocp_version}.tar.gz
+sudo tar -xvzf /tmp/openshift-client-linux-${ocp_version}.tar.gz -C /usr/local/bin oc
+sudo tar -xvf /tmp/openshift-install-linux-${ocp_version}.tar.gz -C /usr/local/bin openshift-install
+sudo sh -c "/usr/local/bin/oc completion bash > /etc/bash_completion.d/oc"
+sudo sh -c "/usr/local/bin/openshift-install completion bash > /etc/bash_completion.d/openshift-install"
 
 # Setup Vim
 
