@@ -17,7 +17,9 @@ wget -O /tmp/openshift-install-linux-${ocp_version}.tar.gz ${mirror}/ocp/${ocp_v
 sudo tar -xvzf /tmp/openshift-client-linux-${ocp_version}.tar.gz -C /usr/local/bin oc
 sudo tar -xvf /tmp/openshift-install-linux-${ocp_version}.tar.gz -C /usr/local/bin openshift-install
 sudo sh -c "/usr/local/bin/oc completion bash > /etc/bash_completion.d/oc"
+sudo chmod o+r /etc/bash_completion.d/oc
 sudo sh -c "/usr/local/bin/openshift-install completion bash > /etc/bash_completion.d/openshift-install"
+sudo chmod o+r /etc/bash_completion.d/openshift-install
 
 # Setup Vim
 
