@@ -1,5 +1,5 @@
 # Install packages
-sudo dnf install -y jq bash-completion vim-enhanced tree tmux wget ansible-core nmap-ncathelm git
+sudo dnf install -y jq bash-completion vim-enhanced tree tmux wget ansible-core nmap-ncathelm git ansible-core
 
 # Setup Fuzzy Finder
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
