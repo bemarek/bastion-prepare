@@ -1,9 +1,9 @@
 # Install packages
-sudo dnf install -y jq bash-completion vim-enhanced tree tmux wget ansible-core nmap-ncat helm git ansible-core
+sudo dnf install -y jq bash-completion vim-enhanced tree tmux wget ansible-core nmap-ncat helm git
 
 # Setup Fuzzy Finder
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-sh ~/.fzf/install
+sh ~/.fzf/install --all
 
 # Setup Git Prompt
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
