@@ -1,5 +1,8 @@
 # Install packages
-sudo dnf install -y jq bash-completion vim-enhanced tree tmux wget ansible-core nmap-ncat helm git
+sudo dnf install -y jq bash-completion vim-enhanced tree tmux wget ansible-core nmap-ncat git
+
+# Install helm
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
 # Setup Fuzzy Finder
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
