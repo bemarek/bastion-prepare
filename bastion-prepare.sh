@@ -37,7 +37,7 @@ eof
 
 cat >> ~/.bashrc << eof
 
-# Beautify less
+# Beautify and configure less
 export LESSOPEN="|pygmentize -g %s"
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --window=-4'
 
@@ -47,9 +47,6 @@ export KUBE_EDITOR="vim"
 # Aliases
 alias ll='ls -la'
 alias vi='vim'
-
-# Configure less
-export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --window=-4'
 
 # Configure history
 export HISTTIMEFORMAT="%Y.%m.%d %H:%M:%S "
