@@ -27,10 +27,13 @@ sudo chmod o+r /etc/bash_completion.d/openshift-install
 # Setup Vim
 
 cat >> ~/.vimrc << eof
-set ruler
 filetype on         	" turn on file detection
 filetype plugin on  	" load file type plugin
 filetype indent on  	" turn on file type based indention scripts
+set ruler
+set tabstop=2 softtabstop=2 shiftwidth=2
+set expandtab
+set cursorcolumn
 eof
 
 # Setup .bashrc
