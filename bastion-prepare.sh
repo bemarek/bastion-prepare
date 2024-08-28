@@ -34,6 +34,7 @@ set ruler
 set tabstop=2 softtabstop=2 shiftwidth=2
 set expandtab
 set cursorcolumn
+highlight CursorColumn ctermbg=darkblue
 eof
 
 # Setup .bashrc
